@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+    
+    
+    <style>
+     
+    *{margin: 0; padding: 0;}
+    #wrap{
+      width:650px;
+      margin: 0 auto;
+      overflow: hidden;
+      padding-top: 10px;
+    }
+      div > articl{
+        float: left;
+        margin-left: 10px;
+        margin-bottom: 10px;
+      }
+        img{display: block;}
+        body {background-color: #000000 ;}
+
+        .container {
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    padding: 32px 0;
+}
+.input-container {
+    width: 80%;
+    display: flex;
+    align-self: center;
+    justify-content: space-between;
+}
+#input {
+    width: 70%;
+    padding: 8px 12px;
+    border-radius: 4px;
+    border: 1px solid #eaeaea;
+}
+#add-button {
+    width: 20%;
+    background-color: #a0d0fd;
+    border-radius: 4px;
+    border: 1px solid #41a3fe;
+    color: white;
+}
+.list-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 48px;
+    width: 80%;
+    align-self: center;
+    border-radius: 4px;
+    border: 1px solid #eaeaea;
+    background-color: white;
+}   
+
+img { 
+    margin-left: 40%;
+}
+h2 {
+
+    padding: 16px 20px;
+    margin: 0;
+    font-size: 16px;
+    border-bottom: 1px solid #eaeaea;
+    
+}
+h4 {
+    
+    margin-left: 150px;
+    font-size: 26px;
+    border-bottom: 1px solid #eaeaea;
+    
+}
+#list {
+    margin: 32px 0;
+}
+.list-item {
+    border-bottom: 1px solid #eaeaea;
+    margin-right: 32px;
+    padding: 16px 0;
+    font-size: 25px;
+}
+
+.scroll-image {
+    display:flex;
+    flex-wrap:wrap;
+    align-items:flex-start;
+    margin:30px 0;
+}
+.scroll-image img {
+    width:calc(33.333% - 10px);
+    margin:0 15px 15px 0;
+}
+.scroll-image img:nth-of-type(3n),
+.scroll-image img:last-child {
+    margin-right:0;
+}
+@media screen and (max-width:480px){
+  .scroll-image {
+    flex-wrap:nowrap;
+    justify-content:flex-start;
+    position:relative;
+    width:114%;
+    left:-7%;
+    padding:0 7%;
+    overflow-y:hidden;
+    overflow-x:auto;
+    -ms-overflow-style:none;
+    -webkit-overflow-scrolling:touch;
+  }
+  .scroll-image img {
+    display:block;
+    flex:0 0 auto;
+    width:80%;
+    margin:0 15px 0 0;
+  }
+  .scroll-image img:last-of-type{
+    margin-right:0;
+  }
+  .scroll-image:after {
+    content:'';
+    display:block;
+    flex:0 0 auto;
+    align-self:stretch;
+    width:7%;
+  }
+}
+    </style>
+  </head>
+  <body>
+    <div id="wrap"></div>
+    <div class="container">
+        <div class="input-container">
+          <input id="input" placeholder="Travel" />
+          <button id="add-button">추가</button>
+          </div><br>
+    <img class="img" src="여행 1.png" style="width: 20vw; min-width: 80px;" /><br>
+    <img src="여행 2.jpg" style="width: 20vw; min-width: 80px; "/><br>
+    <img src="여행 3.png" style="width: 20vw; min-width:100px; "/><br>
+    <h4>할 일 목록</h4>
+    <div class="list-container">
+        <ul id="list">
+          <a class="list-item">&nbsp;&nbsp;A</a><br><br>
+          <a class="list-item">&nbsp;&nbsp;B</a>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
